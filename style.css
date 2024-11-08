@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* Base styles for the header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 150px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.5s, padding 0.5s, box-shadow 0.5s; /* Smooth transitions */
+    background: transparent;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Sticky class applied to the header when scrolling */
+.sticky {
+    background: #37517E;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    letter-spacing: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Initial styles for the logo */
+.logo {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/* Initial styles for O and A */
+.logo .highlight {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: black; /* Initial color */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+/* Sticky styles for O and A when scrolling */
+.sticky .logo .highlight {
+    font-size: 1.5em;
+    color: #ff0157; /* New color for O and A */
+    transform: scale(1.2); /* Scale up O and A */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: .5s ease;
+}
+
+/* Hover effect for the logo */
+.logo:hover .highlight {
+    color: #ff0157; /* Change color of O and A on hover */
+    transform: scale(1.2); /* Scale O and A on hover */
+    transition: .5s ease;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+    font-size: 19px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    position: relative;
+    padding: 6px 10px;
+    transform: scale(1) translateY(20px);
+    transition: .5s ease;
+}
+
+header .navigation li a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #ff0157;
+    border-radius: 15px;
+    transform: scale(1) translateY(30px);
+    transition: .5s ease;
+    opacity: 0;
+}
+
+/* Hover effect for the links */
+header .navigation li a:hover span {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+}
+
+/* Sticky styles for navigation links */
+.sticky .navigation li a {
+    color: #fff; /* New color when scrolled */
+    font-weight: bold;
+    transform: scale(1) translateY(0px);
+}
+
+.logo:link,
+.logo:visited,
+.logo:hover,
+.logo:active {
+    color: inherit; /* Inherit the color from the parent element */
+}
+
+section{
+    padding: 100px;
+}
+
+#home{
+    padding-top: 150px;
+}
+
+.row{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-betweeen;
+    align-items: center;
+}
+
+.row .col50{
+    position: relative;
+    width: 50%;
+    text-align: left;
+}
+
+.titleText{
+    color: black;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.titleText span{
+    color: #ff0157;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.row .col250 {
+    width: 50%; /* Sets width for the right column */
+    display: flex;
+    justify-content: flex-end; /* Aligns the carousel to the right */
+}
+
+.carousel-item{
+  padding: 50px;
+  max-height: 700px;
+}
+.carousel-inner{
+  box-shadow:  20px 20px 60px #bbbbbb,
+             -20px -20px 60px #ffffff;
+  border-radius: 50%;
+  max-height: 700px;
+}
+/* Optional: Adjust the size of the carousel to fit the right side */
+#carouselExampleCaptions {
+    max-width: 100%; /* Ensures carousel fits within the column */
+}
+
+/* Custom style for the left (previous) button icon */
+.carousel-control-prev-icon {
+    background-color: #ff0157; /* Set your desired color here */
+    border-radius: 50%; /* Optional: makes the button circular */
+    width: 50px; /* Adjust size if needed */
+    height: 50px;
+}
+
+/* Custom style for the right (next) button icon */
+.carousel-control-next-icon {
+    background-color: #ff0157; /* Set your desired color here */
+    border-radius: 50%; /* Optional: makes the button circular */
+    width: 50px; /* Adjust size if needed */
+    height: 50px;
+}
+
+/* Optional: Change button hover effects */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #0ef; /* New color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.carousel-control-prev {
+    left: -200px; /* Adjust this value to move it further out */
+}
+
+/* Move the right (next) button further to the right */
+.carousel-control-next {
+    right: -200px; /* Adjust this value to move it further out */
+}
+#websites{
+    background-color: #dde8f0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+/* ... (rest of your CSS) ... */
+
+.websites .row {
+  justify-content: center; /* Center the website items horizontally */
+}
+
+/* ... (rest of your CSS) ... */
+
+.websites .service-item {
+  width: 250px; /* Set the width for each website item */
+  height: 400px; /* Set the height for each website item */
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Optional: background color for styling */
+  border-radius: 8px; /* Optional: add rounded corners */
+  box-shadow:  20px 20px 68px #c9c9c9,
+             -20px -20px 68px #ffffff; /* Optional: subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease-in-out 0.4s;
+}
+  
+  .websites .service-item .icon {
+    margin-bottom: 10px;
+  }
+  .section-title {
+    text-align: center; /* Centers the content inside this container */
+    padding-bottom: 50px;
+  }
+  
+  .section-title h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50; /* Dark blue color */
+    position: relative;
+    display: inline-block; /* Allows the pseudo-elements to position relative to the heading */
+    margin: 0 auto; /* Center the heading */
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .section-title h2 span{
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #ff0157;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .websites .service-item .icon i {
+    color: var(--accent-color);
+    font-size: 36px;
+    transition: 0.3s;
+  }
+  
+  .websites .service-item h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .websites .service-item h4 a {
+    color: var(--heading-color);
+    transition: ease-in-out 0.3s;
+    text-decoration: none;
+  }
+  .subj{
+    font-weight: bolder;
+    color: #2c3e50;
+  }
+  .websites .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .websites .service-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .websites .service-item:hover h4 a {
+    color: #ff0157;
+  }
+
+.team .team-member {
+    background-color: #DDE8F0;
+    box-shadow:  20px 20px 60px #92aeb5,
+             -20px -20px 60px #daffff;
+    position: relative;
+    border-radius: 22px;
+    transition: 0.5s;
+    padding: 30px;
+    height: 100%;
+  }
+  
+  @media (max-width: 468px) {
+    .team .team-member {
+      flex-direction: column;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+  
+  .team .pic {
+    width: 150px; /* Set the width for the image container */
+    height: 150px; /* Set the height for the image container */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 50%; /* Make images circular if desired */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    border-radius: 50%; /* Apply border radius to the image itself */
+}
+
+
+  .team .team-member .pic {
+    overflow: hidden;
+    width: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .team .team-member .pic img {
+    transition: ease-in-out 0.3s;
+  }
+  
+  .team .team-member:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team .team-member .member-info {
+    padding-left: 30px;
+  }
+  
+  @media (max-width: 468px) {
+    .team .team-member .member-info {
+      padding: 30px 0 0 0;
+      text-align: center;
+    }
+  }
+
+  .team .team-member h4 a{
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .team .team-member h4 a:hover{
+    color: #ff0157
+  }
+  .team .team-member span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: color-mix(in srgb, var(--default-color), transparent 85%);
+    bottom: 0;
+    left: 0;
+  }
+  
+  @media (max-width: 468px) {
+    .team .team-member span::after {
+      left: calc(50% - 25px);
+    }
+  }
+  
+  .team .team-member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+  }
+  
+  .team .team-member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+  }
+  
+  @media (max-width: 468px) {
+    .team .team-member .social {
+      justify-content: center;
+    }
+  }
+  
+  .team .team-member .social a {
+    background: transparent;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 36px;
+    height: 36px;
+    color: #444444;
+  }
+  
+  .team .team-member .social a i {
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    font-size: 25px;
+    margin: 0 2px;
+  }
+  
+  .team .team-member .social a:hover {
+    background: #ff0157;
+    color: white;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .team .team-member .social a:hover i {
+    color: var(--contrast-color);
+  }
+  
+  .team .team-member .social a+a {
+    margin-left: 8px;
+  }
+  
+  /* Styling for section titles with underline */
+.section-title h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #2c3e50; /* Dark blue color */
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 60px; /* Adjust width for the underline length */
+  height: 4px; /* Thickness of the blue underline */
+  background-color: #ff0157; /* Light blue color */
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /* Distance below the text */
+  transform: translateX(-50%);
+}
+
+.section-title h2::before {
+  content: "";
+  width: 200px; /* Length of the grey lines on each side */
+  height: 1px;
+  background-color: black; /* Light grey color */
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
